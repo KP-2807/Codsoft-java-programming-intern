@@ -1,0 +1,48 @@
+
+import java.util.Scanner;
+
+public class StudentGradeCalculator {
+
+    public static void main(String[] c){
+        Scanner scan=new Scanner(System.in);
+        System.out.print("Enter total number of Subjects:");
+        int totalSubject=scan.nextInt();
+        int totalMark=0;
+        int averagePercentage;
+        for(int i=1;i<=totalSubject;i++){
+            System.out.print("Enter mark of Subject "+ i +": " );
+            int subjectMark=scan.nextInt();
+            //System.out.print("mark of Subject "+ i +": "+ subjectMark);
+
+            totalMark+=subjectMark ;
+            if(i==totalSubject){
+            System.out.println("\n\nTotal mark obtained in all "+ totalSubject +" subject : "+ totalMark);}
+        }
+        averagePercentage=totalMark/totalSubject;
+        System.out.println("Average Percentage obtained :"+ averagePercentage);
+        //grade calculation
+         System.out.print("Student Grade :");
+         if(averagePercentage>90){
+             System.out.print("O");
+         }
+         else if(averagePercentage>80 && averagePercentage<=90){
+             System.out.print("A");
+         }
+         else if(averagePercentage>70 && averagePercentage<=80){
+             System.out.print("B");
+         }
+         else if(averagePercentage>60 && averagePercentage<=70){
+             System.out.print("C");
+         }
+         else if(averagePercentage>50 && averagePercentage<=60){
+             System.out.print("D");
+         }
+         else if(averagePercentage>40 && averagePercentage<=50){
+             System.out.print("E");
+         }
+         else{
+             System.out.print("F");
+         }
+    }
+}
+
